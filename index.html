@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
+    <script language="JavaScript" src="scripts.js"></script>
     <title>Cromai</title>
 </head>
 <body>    
@@ -15,22 +15,22 @@
 
         <!--Essa div contém os textos e inputs relacionados aos catetos que aparecem na tela.-->
         <div class="catetos">
-            <h4>Cateto A: <input class="input" id='cateto-a' type="number" placeholder="__________" value="" /></h4>
+            <h4>Cateto A: <input class="input" id='cateto-a' type="number" placeholder="__________" value="" onkeyup="mudarValoresTriangulo()"/></h4>
 
-            <h4>Cateto B: <input class="input" id='cateto-b' type="number" placeholder="__________" value="" /></h4>
+            <h4>Cateto B: <input class="input" id='cateto-b' type="number" placeholder="__________" value="" onkeyup="mudarValoresTriangulo()"/></h4>
 
-            <h4>Cateto C: <input class="input" id='cateto-c' type="number" placeholder="__________" value="" /></h4>
+            <h4>Cateto C: <input class="input" id='cateto-c' type="number" placeholder="__________" value="" onkeyup="mudarValoresTriangulo()"/></h4>
         </div>
 
         <!--Nessa div eu altero os valores de cada lado de acordo com o input do usuário por meio da propriedade id-->
         <div class="triangulo">
             <img src="resource/triangulo.png" alt="Triangulo imagem." id="triangulo"></img>
 
-            <h4 id="lado-menor">3</h4>
+            <h4 id="lado-menor"></h4>
 
-            <h4 id="lado-medio">4</h4>
+            <h4 id="lado-medio"></h4>
 
-            <h4 id="lado-maior">5</h4>
+            <h4 id="lado-maior"></h4>
         </div>
         
         <div class="texto">
