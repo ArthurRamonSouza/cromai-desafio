@@ -34,6 +34,19 @@ body {
     padding-top: 5%;
 }
 
+button {
+    margin-bottom: 5%;
+    margin-left: 15%;
+    border: black;
+    border-width: 4px;
+    border-style: groove;
+    border-radius: 8%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-size: 30px;
+    font-family: 'Solitreo', cursive;
+}
+
 h1 {
     margin: 0px;
     padding: 5px;   
@@ -103,7 +116,7 @@ input {
 
 #lado-medio {
     position: absolute;
-    margin-left: 12%;
+    margin-left: 10%;
     margin-top: -22%;
 }
 
