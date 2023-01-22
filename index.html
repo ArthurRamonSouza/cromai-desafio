@@ -1,12 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Cromai</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: black;
+            font-size: 30px;
+            height: max-content;
+            background-size: cover;
+            font-family: 'Solitreo', cursive;
+            background-image: url("resource/background_calculos.png");
+        }
+
+        .filtro {
+            margin: 0px;
+            padding: 0px;
+            height: max-content;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .header {
+            padding: 1px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .principal {
+            margin-top: 5vh;
+            margin-left: 8vw;
+            margin-right: 8vw;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cateto {
+            margin-bottom: 10vh;
+        }
+
+        .triangulo {
+            position: relative;
+        }
+        
+        img {
+            width: 108%;
+            height: 27%;
+            object-fit: contain;
+            position: relative;
+        }
+        
+        .numero {
+            position: absolute;
+        }
+        
+        #lado-menor {
+            margin-left: 30vw;
+            margin-top: -45vh;
+        }
+        
+        #lado-medio {
+            margin-left: 11vw;
+            margin-top: -40vh;
+        }
+        
+        #lado-maior {
+            margin-left: 20vw;
+            margin-top: -17vh;
+        }
+        
+        h3 {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: black;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        input {
+            width: 200px;
+            padding: 0px;
+            resize: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            background-color: transparent;
+            font-family: 'Solitreo', cursive;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!--Para criar uma camada escura e opaca em cima do background escolhido-->
+    <div class="filtro">
+        <div class="header">
+            <h2>Desafio Cromai</h2>
+        </div>
+
+        <!--Contém todas as divs de conteúdo da página-->
+        <div class="principal">
+
+            <!--Primeira seção de conteudo-->
+            <div class="container">
+
+                <!--Aqui estam os inputs do usuário-->
+                <div class="catetos">
+                    <div class="cateto">
+                        <h4>Cateto A: <input class="input" id='cateto-a' type="number" placeholder="__________" value="" /></h4>
+                    </div>
+
+                    <div class="cateto">
+                        <h4>Cateto B: <input class="input" id='cateto-b' type="number" placeholder="__________" value="" /></h4>
+                    </div>
+
+                    <div class="cateto">
+                        <h4>Cateto C: <input class="input" id='cateto-c' type="number" placeholder="__________" value="" /></h4>
+                    </div>
+                </div>
+
+                <!--Aqui é onde importo a imagem do triangulo e com coloco os comprimentos de cada lado-->
+                <div class="triangulo">
+                
+                    <img src="resource/triangulo.png" alt="triangulo" id="img-triangulo"></img>
+
+                    <div class="numero" id="lado-menor">
+                        <h4>3</h4>
+                    </div>
+
+                    <div class="numero" id="lado-medio">
+                        <h4>4</h4>
+                    </div>
+
+                    <div class="numero" id="lado-maior">
+                        <h4>5</h4>
+                    </div>
+
+                </div>
+            </div>
+
+            <br class="texto">
+            <h3>Teorema de Pitágoras</h3>
+            <p>O teorema de Pitágoras relaciona as medidas dos lados de um triângulo retângulo da seguinte maneira:</p>
+            <h4>a^2 = b^2 + c^2</h4>
+
+        </div>
+    </div>
+    </div>
+
 </body>
+
 </html>
