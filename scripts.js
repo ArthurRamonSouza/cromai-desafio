@@ -1,9 +1,9 @@
 // A ideia é fazer os inputs do usuário aparecerem no triângulo na parte direita da tela.
+// Array para armazenar os valores dos catetos.
 var catetos = Array(3);
 
 function mudarValoresTriangulo() {
 
-    // Array para armazenar os valores dos catetos.
     // catetos[] = [cateto-a, cateto-b, cateto-c]
     catetos[0] = document.querySelector("#cateto-a").value;
 
@@ -53,14 +53,18 @@ function mudarValoresTriangulo() {
     if (document.querySelector("#lado-maior").innerHTML == "") {
         document.querySelector("#lado-maior").innerHTML = "C";
     }
+
+    document.getElementById("cateto-a").disabled = false;
+    document.getElementById("cateto-b").disabled = false;
+    document.getElementById("cateto-c").disabled = false;
 }
 function verificaCamposPreenchidos(){
 
     let input_a = document.getElementById("cateto-a");
     
-    let input_c =document.getElementById("cateto-c");
+    let input_c = document.getElementById("cateto-c");
 
-    let input_b =document.getElementById("cateto-b");
+    let input_b = document.getElementById("cateto-b");
 
     if ((document.getElementById("cateto-a").value != "") && (document.getElementById("cateto-b").value != "")) {
         input_c.disabled = true;
@@ -76,9 +80,7 @@ function verificaCamposPreenchidos(){
     }else {
     
     input_a.disabled = false;
-
     input_b.disabled = false;
-
     input_c.disabled = false;
     }
 }
