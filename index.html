@@ -1,176 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Cromai</title>
-    <style>
-        body {
-            margin: 0px;
-            padding: 0px;
-            color: black;
-            font-size: 30px;
-            height: max-content;
-            background-size: cover;
-            font-family: 'Solitreo', cursive;
-            background-image: url("resource/background_calculos.png");
-        }
-
-        .filtro {
-            margin: 0px;
-            padding: 0px;
-            height: max-content;
-            background-size: cover;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-        .header {
-            padding: 1px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .principal {
-            margin-top: 5vh;
-            margin-left: 8vw;
-            margin-right: 8vw;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .cateto {
-            margin-bottom: 10vh;
-        }
-
-        .triangulo {
-            position: relative;
-        }
-        
-        img {
-            width: 108%;
-            height: 27%;
-            object-fit: contain;
-            position: relative;
-        }
-        
-        .numero {
-            position: absolute;
-        }
-        
-        #lado-menor {
-            margin-left: 30vw;
-            margin-top: -45vh;
-        }
-        
-        #lado-medio {
-            margin-left: 11vw;
-            margin-top: -40vh;
-        }
-        
-        #lado-maior {
-            margin-left: 20vw;
-            margin-top: -17vh;
-        }
-        
-        h3 {
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        /* Firefox */
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-
-        ::placeholder {
-            /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: black;
-            opacity: 1;
-            /* Firefox */
-        }
-
-        input {
-            width: 200px;
-            padding: 0px;
-            resize: none;
-            border: none;
-            color: white;
-            font-size: 30px;
-            background-color: transparent;
-            font-family: 'Solitreo', cursive;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Cromai</title>
 </head>
+<body>    
+    <!--Aqui vai todo o conteúdo html da página. O filtro é uma camada opaca para dar um efeito bacana no plano de fundo.-->
+    <div class="container, filtro">
+       <h1>Desafio Cromai</h1>
 
-<body>
-    <!--Para criar uma camada escura e opaca em cima do background escolhido-->
-    <div class="filtro">
-        <div class="header">
-            <h2>Desafio Cromai</h2>
+        <!--Essa div contém os textos e inputs relacionados aos catetos que aparecem na tela.-->
+        <div class="catetos">
+            <h4>Cateto A: <input class="input" id='cateto-a' type="number" placeholder="__________" value="" /></h4>
+
+            <h4>Cateto B: <input class="input" id='cateto-b' type="number" placeholder="__________" value="" /></h4>
+
+            <h4>Cateto C: <input class="input" id='cateto-c' type="number" placeholder="__________" value="" /></h4>
         </div>
 
-        <!--Contém todas as divs de conteúdo da página-->
-        <div class="principal">
+        <!--Nessa div eu altero os valores de cada lado de acordo com o input do usuário por meio da propriedade id-->
+        <div class="triangulo">
+            <img src="resource/triangulo.png" alt="Triangulo imagem." id="triangulo"></img>
 
-            <!--Primeira seção de conteudo-->
-            <div class="container">
+            <h4 id="lado-menor">3</h4>
 
-                <!--Aqui estam os inputs do usuário-->
-                <div class="catetos">
-                    <div class="cateto">
-                        <h4>Cateto A: <input class="input" id='cateto-a' type="number" placeholder="__________" value="" /></h4>
-                    </div>
+            <h4 id="lado-medio">4</h4>
 
-                    <div class="cateto">
-                        <h4>Cateto B: <input class="input" id='cateto-b' type="number" placeholder="__________" value="" /></h4>
-                    </div>
+            <h4 id="lado-maior">5</h4>
+        </div>
+        
+        <div class="texto">
+            <h4>Teorema de Pitágoras</h4>
 
-                    <div class="cateto">
-                        <h4>Cateto C: <input class="input" id='cateto-c' type="number" placeholder="__________" value="" /></h4>
-                    </div>
-                </div>
-
-                <!--Aqui é onde importo a imagem do triangulo e com coloco os comprimentos de cada lado-->
-                <div class="triangulo">
-                
-                    <img src="resource/triangulo.png" alt="triangulo" id="img-triangulo"></img>
-
-                    <div class="numero" id="lado-menor">
-                        <h4>3</h4>
-                    </div>
-
-                    <div class="numero" id="lado-medio">
-                        <h4>4</h4>
-                    </div>
-
-                    <div class="numero" id="lado-maior">
-                        <h4>5</h4>
-                    </div>
-
-                </div>
-            </div>
-
-            <br class="texto">
-            <h3>Teorema de Pitágoras</h3>
             <p>O teorema de Pitágoras relaciona as medidas dos lados de um triângulo retângulo da seguinte maneira:</p>
-            <h4>a^2 = b^2 + c^2</h4>
 
+            <h5>a^2 = b^2 + c^2</h5>
+
+            <p>Lembrando que o lado a é a hipotenusa e os outros dois lados, o lado b e o lado c, são os catetos do triângulo.</p>
         </div>
-    </div>
-    </div>
 
+   </div>
 </body>
-
 </html>
