@@ -15,24 +15,29 @@
 
         <!--Essa div contém os textos e inputs relacionados aos catetos que aparecem na tela.-->
         <div class="catetos">
-            <h4>Cateto A: <input class="input" id='cateto-a' type="number" placeholder="__________" value="" onkeyup="mudarValoresTriangulo()"/></h4>
+            <h4>Cateto A: <input class="input" id='cateto-a' type="number" placeholder="__________" value="" onkeyup="verificaCamposPreenchidos()"/></h4>
 
-            <h4>Cateto B: <input class="input" id='cateto-b' type="number" placeholder="__________" value="" onkeyup="mudarValoresTriangulo()"/></h4>
+            <h4>Cateto B: <input class="input" id='cateto-b' type="number" placeholder="__________" value="" onkeyup="verificaCamposPreenchidos()"/></h4>
 
-            <h4>Cateto C: <input class="input" id='cateto-c' type="number" placeholder="__________" value="" onkeyup="mudarValoresTriangulo()"/></h4>
+            <h4>Cateto C: <input class="input" id='cateto-c' type="number" placeholder="__________" value="" onkeyup="verificaCamposPreenchidos()"/></h4>
+
+            <button type="button" onclick="mudarValoresTriangulo()">Calcular</button>
+        
+
         </div>
 
         <!--Nessa div eu altero os valores de cada lado de acordo com o input do usuário por meio da propriedade id-->
         <div class="triangulo">
             <img src="resource/triangulo.png" alt="Triangulo imagem." id="triangulo"></img>
 
-            <h4 id="lado-menor">3</h4>
+            <h4 id="lado-menor">A</h4>
 
-            <h4 id="lado-medio">4</h4>
+            <h4 id="lado-medio">B</h4>
 
-            <h4 id="lado-maior">5</h4>
+            <h4 id="lado-maior">C</h4>
         </div>
-        
+
+        <!--Div que cotém uma breve introdução sobre o teorema de Pitágoras-->
         <div class="texto">
             <h4>Teorema de Pitágoras</h4>
 
