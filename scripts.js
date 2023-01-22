@@ -19,6 +19,17 @@ function mudarValoresTriangulo(){
     document.querySelector("#lado-medio").innerHTML = catetos_ordenados[1];
     
     document.querySelector("#lado-maior").innerHTML =  catetos_ordenados[2];
+
+    if(document.querySelector("#lado-menor").innerHTML == ""){
+        document.querySelector("#lado-menor").innerHTML = 3;
+        
+    }
+    if(document.querySelector("#lado-medio").innerHTML == ""){
+        document.querySelector("#lado-medio").innerHTML = 4;
+    }
+    if(document.querySelector("#lado-maior").innerHTML == ""){
+        document.querySelector("#lado-maior").innerHTML = 5;
+    }
 }
 
 //Testando o script que armazena os inputs.
