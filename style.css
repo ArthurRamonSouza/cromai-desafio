@@ -1,0 +1,135 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-size: 30px;
+    font-family: 'Solitreo', cursive;
+    height: max-content;
+    width: 100vw;
+    background-size: cover;
+    background-image: url("resource/background_calculos.png");
+}
+
+.filtro {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    display: flex;
+    background-size: cover;
+    justify-content: space-between;
+}
+
+.catetos {
+    position: absolute;
+    margin: 0%;
+    padding: 0%;
+    width: 50%;
+    left: 10%;
+    padding-top: 5%;
+}
+
+h1 {
+    margin: 0px;
+    padding: 5px;   
+    text-align: center;
+}
+
+/*CSS do input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*CSS do input*/
+input[type=number] {
+    /* Firefox */
+    -moz-appearance: textfield;
+}
+
+/*CSS do input*/
+input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}
+
+h4 {
+    margin: 0%;
+    padding: 0%;
+    margin-bottom: 5%;
+}
+
+input {
+    width: 200px;
+    padding: 0px;
+    resize: none;
+    border: none;
+    font-size: 30px;
+    color: black;
+    background-color: transparent;
+    font-family: 'Solitreo', cursive;
+}
+
+.triangulo {
+    margin: 0%;
+    padding: 0%;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    margin-top: 5%;
+}
+
+#triangulo {
+    width: 50%;
+}
+
+.triangulo h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+#lado-menor {
+    position: relative;
+    margin-left: 37%;
+    margin-top: -25%;
+}
+
+#lado-medio {
+    position: relative;
+    margin-left: 12%;
+    margin-top: -4%;
+}
+
+#lado-maior {
+    position: relative;
+    margin-left: 24%;
+    margin-top: 10%;
+}
+
+.texto {
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    margin-left: 10%;
+}
+
+.texto h4 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    margin-top: 8%;
+}
+
+.texto h5 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    margin-left: 20%;
+}
