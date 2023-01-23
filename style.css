@@ -35,12 +35,14 @@ h1 {
 }
 
 a {
+    transition: 0.5s;
     color: black;
     display: inline-block;
     margin-right: 1%;
 }
 
 a:hover {
+    color: rgba(0, 0, 0, 0.7);
     transition: 0.5s;
     transform: scale(1.2);
 }
