@@ -28,7 +28,7 @@ body {
 h1 {
     margin: 0px;
     margin-left: 30%;
-    margin-right: 15%;
+    margin-right: 10%;
     padding: 5px;   
     text-align: center;
     display: inline-block;
@@ -38,6 +38,11 @@ a {
     color: black;
     display: inline-block;
     margin-right: 1%;
+}
+
+a:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
 }
 
 
