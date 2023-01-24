@@ -41,12 +41,31 @@ a {
     margin-right: 1%;
 }
 
-a:hover {
-    color: rgba(0, 0, 0, 0.7);
+#github:hover {
+    color: white;
+    background-color: black;
+    border-radius: 25px;
     transition: 0.5s;
     transform: scale(1.2);
 }
 
+#linkedin:hover {
+    color: #0e76a8;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+#email:hover {
+    color: #0072C6;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+#api:hover {
+    color: #EF5B25;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
 
 .catetos {
     position: absolute;
