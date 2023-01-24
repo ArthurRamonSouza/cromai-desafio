@@ -9,16 +9,39 @@
     <title>Guia Da API</title>
 </head>
 <body>
-    <h1>Como fazer requisições para a API criada</h1>
+    <h1>Como fazer requisições para a API</h1>
     
-    funciona
-    http://127.0.0.1:5000/teorema?ladoa=3&ladob=4
-    http://127.0.0.1:5000/teorema?ladoa=7&ladoc=10
-    http://127.0.0.1:5000/teorema?ladoc=8&ladob=2
+    <p>A API é bem simples e tem uma única função: retornar o terceiro lado de um triângulo seguindo o teorema de Pitágoras.</p>
 
-    erros:
-    http://127.0.0.1:5000/teorema
-    http://127.0.0.1:5000/teorema?ladoa=oito&ladob=tres
+    <p>Para vê-la funcionando, basta seguir os modelos de requisição abaixo:</p>
+
+    <p>Passando os valores para o cateto A e o cateto B, utilizando o método GET: <b>http://127.0.0.1:5000/teorema?ladoa=3&ladob=4</b></p>
+    imagem
+
+    <p>Passando os valores para o cateto A e a hipotenusa C, utilizando o método GET: <b>http://127.0.0.1:5000/teorema?ladoa=7&ladoc=10</b></p>
+    imagem
+
+    <p>Passando os valores para o cateto B e a hipotenusa C, utilizando o método GET: <b>http://127.0.0.1:5000/teorema?ladoc=8&ladob=2</b></p>
+    imagem
+
+    <p>Ao fazer a requisição, não importa a ordem dos catetos e a hipotenusa. Você obtera os mesmos resultados.</p>
+
+    <h1>Retorno da API</h1>
+
+    <p>A API vai retornar um JSON com a seguinte estrutura:</p>
+    imagem
+    <b><p>{</p>
+    <p>&nbsp "Mensagem":"Requisicao valida.",</p>
+    <p>&nbsp "Resultado":{"Cateto A":3.0,"Cateto B":4.0,"Hipotenusa C":5.0},</p>
+    <p>&nbsp "Status":200</p>
+    <p>}</p></b>
+
+    <p>A mensagem junto com o status vão dizer se a requisição é válida ou não.</p>
+    <p>Já o resultado é onde será retornado os valores dos lados passados como parâmetro junto o lado que foi calculado.</p>
+
+    <h1>Exemplo de requisição errada para a API</h1>
+    imagem http://127.0.0.1:5000/teorema<br/>
+    imagem http://127.0.0.1:5000/teorema?ladoa=oito&ladob=tres
     
 </body>
 </html>
