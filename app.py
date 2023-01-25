@@ -8,9 +8,9 @@ app = Flask(__name__)
 #app.config["JSON_SORT_KEYS"] = False
 
 # Página inicial será a documentação da API
-@app.route("/", methods=["GET"])
+@app.get('/')
 def homePage():
-    return render_template("api-documentation.html")
+    return render_template("api\templates\api-documentation.html")
     # return {"key": "value"}
 
 # Mapeamento da API
