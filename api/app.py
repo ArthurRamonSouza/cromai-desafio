@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from api import formula
+from . import formula
 
 # Criando a API com Flask 
 app = Flask(__name__)
@@ -8,13 +8,13 @@ app = Flask(__name__)
 #app.config["JSON_SORT_KEYS"] = False
 
 # Página inicial será a documentação da API
-@app.route("/", methods=["GET"])
+@app.get('/')
 def homePage():
     return render_template("api-documentation.html")
     # return {"key": "value"}
 
 # Mapeamento da API
-@app.route("/teorema", methods=["GET"])
+@app.get("/teorema")
 def recebeCatetos():
     mensagem = None
 
