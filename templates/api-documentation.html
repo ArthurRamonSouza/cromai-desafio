@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ url_for('static', filename='api.png') }}">
-    <link rel="icon" href="../static/api.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/static/api.png">
+    <link rel="stylesheet" href="../api/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Solitreo&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/324a50b7f9.js" crossorigin="anonymous"></script>
-    <title>Documentação Da API</title>
+    <title>Documentação Da API</title>  
 </head>
 
 <!--Página que contém a documentação da API-->
@@ -44,17 +44,17 @@
         <p>Passando os valores para o cateto A e o cateto B, utilizando o método GET:
             <b>http://127.0.0.1:5000/teorema?ladoa=3&ladob=4</b>
         </p>
-        <img src="../static/requisicao-ladoa-ladob.png" alt="API imagem."></img>
+        <img src="../api/static/requisicao-ladoa-ladob.png" alt="API imagem."></img>
 
         <p>Passando os valores para o cateto A e a hipotenusa C, utilizando o método GET:
             <b>http://127.0.0.1:5000/teorema?ladoa=7&ladoc=10</b>
         </p>
-        <img src="../static/requisicao-ladoa-ladoc.png" alt="API imagem."></img>
+        <img src="../api/static/requisicao-ladoa-ladoc.png" alt="API imagem."></img>
 
         <p>Passando os valores para o cateto B e a hipotenusa C, utilizando o método GET:
             <b>http://127.0.0.1:5000/teorema?ladoc=8&ladob=2</b>
         </p>
-        <img src="../static/requisicao-ladob-ladoc.png" alt="API imagem."></img>
+        <img src="../api/static/requisicao-ladob-ladoc.png" alt="API imagem."></img>
 
         <p>Ao fazer a requisição, não importa a ordem dos catetos e a hipotenusa. Você obtera os mesmos resultados.
         </p>
@@ -65,7 +65,7 @@
         <h1>Retorno da API</h1>
 
         <p>A API vai retornar um JSON com a seguinte estrutura:</p>
-        <img src="../static/retorno-api-json.png" alt="Imagem." id="triangulo"></img>
+        <img src="../api/static/retorno-api-json.png" alt="Imagem." id="triangulo"></img>
         <b>
             <p>{</p>
             <p>&nbsp "Mensagem": "Requisicao valida.",</p>
@@ -87,12 +87,12 @@
         <br />
 
         <p>Caso você passe um parametro errado pela url ou não passe parâmetros. Exemplo: <b>http://127.0.0.1:5000/teorema</b></p>
-        <img src="../static/requisicao-invalida.png" alt="Imagem." id="triangulo"></img>
+        <img src="../api/static/requisicao-invalida.png" alt="Imagem." id="triangulo"></img>
 
         <br />
 
         <p>Caso você passe valores de tipo não numérico para os parâmetros. Exemplo: <b>http://127.0.0.1:5000/teorema?ladoa=oito&ladob=tres</b></p>
-        <img src="../static/requisicao-invalida-parametro-string.png" alt="Imagem." id="triangulo"></img>
+        <img src="../api/static/requisicao-invalida-parametro-string.png" alt="Imagem." id="triangulo"></img>
     </div>
 </body>
 
