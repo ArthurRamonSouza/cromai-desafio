@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ url_for('static', filename='api.png') }}">
     <link rel="icon" href="../static/api.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solitreo&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/324a50b7f9.js" crossorigin="anonymous"></script>
     <title>Documentação Da API</title>
 </head>
@@ -16,32 +19,42 @@
         margin: 0%;
         padding: 0%;
         color: white;
+        font-family: 'Solitreo', cursive;
+        background-color: white;
+    }
+
+    header {
+        height: 1%;
+        display: flex;
         background-color: rgba(0, 0, 0, 0.9);
+        background-size: cover;
+    }
+
+    header h1 {
+        margin-left: 40%;
+        margin-right: 20%;
     }
 
     .conteudo {
-        margin: 40px;
         padding: 30px;
-        border-radius: 2%;
-        background-color: #303134;
-    }
-
-    h1 {
-        margin-top: 50px;
-        justify-content: center;
-        display: flex;        
-        color: white;
+        color: black;
     }
 
     .conteudo h1 {
-        margin: 8px;
-        color: #EF5B25;
-        display: inline-block;
+        color: black;
+        display: flex;
         justify-content: center;
+    }
+
+    .conteudo img {
+        max-width: 600px;
+        width: auto;
+        height: auto;
     }
 
     p {
         margin: 8px;
+        font-size: 20px;
     }
 
     img {
@@ -49,23 +62,18 @@
     }
 
     a {
-        transition: 0.5s;
-        color: black;
+        color: white;
         display: inline-block;
-        margin-right: 1%;
-    }
-
-    .github {
-        margin-left: 10%;
+        margin-right: 2%;
     }
 
     i {
         font-size: 30px;
+        margin-top: 80%;
+        transition: 0.5s;
     }
 
     #github:hover {
-        color: white;
-        background-color: black;
         border-radius: 25px;
         transition: 0.5s;
         transform: scale(1.2);
@@ -84,83 +92,90 @@
     }
 
     #calculadora:hover {
-        color: white;
         border-radius: 25px;
         transition: 0.5s;
         transform: scale(1.2);
     }
-
-    .footer {
-        margin-top: 5%;
-        padding: 10px;
-        display: flex;
-        height: 50px;
-        background-color: #303134;
-    }
 </style>
 
 <!--Página que contém a documentação da API-->
+
 <body>
-    <h1>Documentação da API</h1>
-    
+    <header>
+        <h1>Documentação da API</h1>
+
+        <a class="github" href="https://github.com/ArthurRamonSouza" target="_blank"><i class="fa-brands fa-github"
+                id="github" rel="noopener noreferrer"></i></a>
+
+        <a href="https://www.linkedin.com/in/arthurramon/" target="_blank"><i class="fa-brands fa-linkedin"
+                id="linkedin" rel="noopener noreferrer"></i></a>
+
+        <a href="mailto:arthuramon.souza93@hotmail.com" target="_blank"><i class="fa-solid fa-envelope" id="email"
+                rel="noopener noreferrer"></i></a>
+
+        <a href="https://arthurramonsouza.github.io/cromai-desafio/" target="_blank"><i class="fa-solid fa-globe"
+                id="calculadora"></i></a>
+    </header>
+
+
     <div class="conteudo">
         <h1>Como fazer requisições para a API</h1>
 
-        <p>A API é bem simples e tem uma única função: retornar o terceiro lado de um triângulo seguindo o teorema de
-            Pitágoras.</p>
-
-        <p>Para vê-la funcionando, basta seguir os modelos de requisição abaixo:</p>
+        <p>A API é bem simples e tem uma única função: retornar o terceiro lado de um triângulo seguindo o teorema
+            de Pitágoras. Para vê-la funcionando, basta seguir os modelos de requisição abaixo:</p>
 
         <p>Passando os valores para o cateto A e o cateto B, utilizando o método GET:
             <b>http://127.0.0.1:5000/teorema?ladoa=3&ladob=4</b>
         </p>
-        <img src="resources/images/triangulo.png" alt="Imagem." id="triangulo"></img>
+        <img src="../static/requisicao-ladoa-ladob.png" alt="API imagem."></img>
 
         <p>Passando os valores para o cateto A e a hipotenusa C, utilizando o método GET:
             <b>http://127.0.0.1:5000/teorema?ladoa=7&ladoc=10</b>
         </p>
-        <img src="resources/images/triangulo.png" alt="Imagem." id="triangulo"></img>
+        <img src="../static/requisicao-ladoa-ladoc.png" alt="API imagem."></img>
 
         <p>Passando os valores para o cateto B e a hipotenusa C, utilizando o método GET:
             <b>http://127.0.0.1:5000/teorema?ladoc=8&ladob=2</b>
         </p>
-        <img src="resources/images/triangulo.png" alt="Imagem." id="triangulo"></img>
+        <img src="../static/requisicao-ladob-ladoc.png" alt="API imagem."></img>
 
-        <p>Ao fazer a requisição, não importa a ordem dos catetos e a hipotenusa. Você obtera os mesmos resultados.</p>
+        <p>Ao fazer a requisição, não importa a ordem dos catetos e a hipotenusa. Você obtera os mesmos resultados.
+        </p>
+    </div>
+
+    <div class="conteudo">
 
         <h1>Retorno da API</h1>
 
         <p>A API vai retornar um JSON com a seguinte estrutura:</p>
-        <img src="resources/images/triangulo.png" alt="Imagem." id="triangulo"></img>
+        <img src="../static/retorno-api-json.png" alt="Imagem." id="triangulo"></img>
         <b>
             <p>{</p>
-            <p>&nbsp "Mensagem":"Requisicao valida.",</p>
-            <p>&nbsp "Resultado":{"Cateto A":3.0,"Cateto B":4.0,"Hipotenusa C":5.0},</p>
-            <p>&nbsp "Status":200</p>
+            <p>&nbsp "Mensagem": "Requisicao valida.",</p>
+            <p>&nbsp "Resultado": {"Cateto A": 3.0,"Cateto B": 4.0,"Hipotenusa C": 5.0},</p>
+            <p>&nbsp "Status": 200</p>
             <p>}</p>
         </b>
 
         <p>A mensagem junto com o status vão dizer se a requisição é válida ou não.</p>
-        <p>Já o resultado é onde será retornado os valores dos lados passados como parâmetro junto o lado que foi
+        <p>Já o resultado é onde será retornado os valores dos lados passados como parâmetro junto o lado que
+            foi
             calculado.
         </p>
+    </div>
 
+    <div class="conteudo">
         <h1>Exemplo de requisição errada para a API</h1>
-        <br/>
-        <img src="resources/images/triangulo.png" alt="Imagem." id="triangulo"></img>
-        http://127.0.0.1:5000/teorema<br />
-        <img src="resources/images/triangulo.png" alt="Imagem." id="triangulo"></img>
-        http://127.0.0.1:5000/teorema?ladoa=oito&ladob=tres
 
-        <div class="footer">
-            <a class="github" href="https://github.com/ArthurRamonSouza" target="_blank"><i class="fa-brands fa-github"
-                    id="github" rel="noopener noreferrer"></i></a>
-            <a href="https://www.linkedin.com/in/arthurramon/" target="_blank"><i class="fa-brands fa-linkedin"
-                    id="linkedin" rel="noopener noreferrer"></i></img></a>
-            <a href="mailto:arthuramon.souza93@hotmail.com" target="_blank"><i class="fa-solid fa-envelope" id="email"
-                    rel="noopener noreferrer"></i></a>
-            <a href="https://arthurramonsouza.github.io/cromai-desafio/" target="_blank"><i class="fa-solid fa-globe" id="calculadora"></i></a>
-        </div>
+        <br />
+
+        <p>Caso você passe um parametro errado pela url ou não passe parâmetros. Exemplo: <b>http://127.0.0.1:5000/teorema</b></p>
+        <img src="../static/requisicao-invalida.png" alt="Imagem." id="triangulo"></img>
+
+        <br />
+
+        <p>Caso você passe valores de tipo não numéricos para os parâmetros. Exemplo: <b>http://127.0.0.1:5000/teorema?ladoa=oito&ladob=tres</b></p>
+        <img src="../static/requisicao-invalida-parametro-string.png" alt="Imagem." id="triangulo"></img>
     </div>
 </body>
 

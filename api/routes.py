@@ -23,7 +23,7 @@ def recebeCatetos():
         try:
             ladoA = float(request.args.get("ladoa"))
         except:
-            mensagem = "Valor do parâmetro 'ladoa' inválido."
+            mensagem = "Valor do parametro 'ladob' invalido."
             ladoA = False
     else:
         ladoA = False
@@ -32,7 +32,7 @@ def recebeCatetos():
         try:
             ladoB = float(request.args.get("ladob"))
         except:
-            mensagem = "Valor do parâmetro 'ladob' inválido."
+            mensagem = "Valor do parametro 'ladob' invalido."
             ladoB = False
     else:
         ladoB = False
@@ -41,7 +41,7 @@ def recebeCatetos():
         try:
             ladoC = float(request.args.get("ladoc"))
         except:
-            mensagem = "Valor do parâmetro 'ladoc' inválido."
+            mensagem = "Valor do parametro 'ladob' invalido."
             ladoC = False
     else:
         ladoC = False
