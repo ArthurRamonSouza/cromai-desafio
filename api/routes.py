@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import main
 
 # Criando a API com Flask 
-app = Flask("Desafio Cromai API")
+app = Flask(__name__)
 
 # Por padrão o Flask ordena o json de resposta
 #app.config["JSON_SORT_KEYS"] = False
@@ -71,4 +71,6 @@ def response(status, mensagem, resultado = False):
         response["Resultado"] = resultado
 
     return response
-app.run()
+
+if __name__ == '__main__':
+    app.run()
