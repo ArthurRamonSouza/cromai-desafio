@@ -29,12 +29,6 @@ header h1 {
     justify-content: center;
 }
 
-.conteudo img {
-    max-width: 600px;
-    width: auto;
-    height: auto;
-}
-
 p {
     margin: 8px;
     font-size: 20px;
@@ -42,6 +36,9 @@ p {
 
 img {
     margin: 8px;
+    max-width: 600px;
+    width: auto;
+    height: auto;
 }
 
 a {
@@ -78,4 +75,29 @@ i {
     border-radius: 25px;
     transition: 0.5s;
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 820px) {
+    header h1 {font-size: 25px; margin-right: 10%;}
+    h1, i {font-size: 20px}
+    p {font-size: 15px}
+    img {
+        margin: 5px;
+        max-width: 500px;
+        width: auto;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 412px) {
+    header h1 {font-size: 20px; margin-left: 20%; margin-right: 10%;}
+    h1, i {font-size: 15px}
+    p {font-size: 12px}
+    img {
+        margin: 5px;
+        max-width: 350px;
+        width: auto;
+        height: auto;
+    }
 }
