@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='api.png') }}">
+    <link rel="icon" href="../static/api.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solitreo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/324a50b7f9.js" crossorigin="anonymous"></script>
+    <title>Documentação Da API</title>
+</head>
+
+<!--Página que contém a documentação da API-->
+
+<body>
+    <header>
+        <h1>Documentação da API</h1>
+
+        <a class="github" href="https://github.com/ArthurRamonSouza" target="_blank"><i class="fa-brands fa-github"
+                id="github" rel="noopener noreferrer"></i></a>
+
+        <a href="https://www.linkedin.com/in/arthurramon/" target="_blank"><i class="fa-brands fa-linkedin"
+                id="linkedin" rel="noopener noreferrer"></i></a>
+
+        <a href="mailto:arthuramon.souza93@hotmail.com" target="_blank"><i class="fa-solid fa-envelope" id="email"
+                rel="noopener noreferrer"></i></a>
+
+        <a href="https://arthurramonsouza.github.io/cromai-desafio/" target="_blank"><i class="fa-solid fa-globe"
+                id="calculadora"></i></a>
+    </header>
+
+
+    <div class="conteudo">
+        <h1>Como fazer requisições para a API</h1>
+
+        <p>A API é bem simples e tem uma única função: retornar o terceiro lado de um triângulo seguindo o teorema
+            de Pitágoras. Para vê-la funcionando, basta seguir os modelos de requisição abaixo:</p>
+
+        <p>Passando os valores para o cateto A e o cateto B, utilizando o método GET:
+            <b>http://127.0.0.1:5000/teorema?ladoa=3&ladob=4</b>
+        </p>
+        <img src="../static/requisicao-ladoa-ladob.png" alt="API imagem."></img>
+
+        <p>Passando os valores para o cateto A e a hipotenusa C, utilizando o método GET:
+            <b>http://127.0.0.1:5000/teorema?ladoa=7&ladoc=10</b>
+        </p>
+        <img src="../static/requisicao-ladoa-ladoc.png" alt="API imagem."></img>
+
+        <p>Passando os valores para o cateto B e a hipotenusa C, utilizando o método GET:
+            <b>http://127.0.0.1:5000/teorema?ladoc=8&ladob=2</b>
+        </p>
+        <img src="../static/requisicao-ladob-ladoc.png" alt="API imagem."></img>
+
+        <p>Ao fazer a requisição, não importa a ordem dos catetos e a hipotenusa. Você obtera os mesmos resultados.
+        </p>
+    </div>
+
+    <div class="conteudo">
+
+        <h1>Retorno da API</h1>
+
+        <p>A API vai retornar um JSON com a seguinte estrutura:</p>
+        <img src="../static/retorno-api-json.png" alt="Imagem." id="triangulo"></img>
+        <b>
+            <p>{</p>
+            <p>&nbsp "Mensagem": "Requisicao valida.",</p>
+            <p>&nbsp "Resultado": {"Cateto A": 3.0,"Cateto B": 4.0,"Hipotenusa C": 5.0},</p>
+            <p>&nbsp "Status": 200</p>
+            <p>}</p>
+        </b>
+
+        <p>A mensagem junto com o status vão dizer se a requisição é válida ou não.</p>
+        <p>Já o resultado é onde será retornado os valores dos lados passados como parâmetro junto o lado que
+            foi
+            calculado.
+        </p>
+    </div>
+
+    <div class="conteudo">
+        <h1>Exemplo de requisição errada para a API</h1>
+
+        <br />
+
+        <p>Caso você passe um parametro errado pela url ou não passe parâmetros. Exemplo: <b>http://127.0.0.1:5000/teorema</b></p>
+        <img src="../static/requisicao-invalida.png" alt="Imagem." id="triangulo"></img>
+
+        <br />
+
+        <p>Caso você passe valores de tipo não numérico para os parâmetros. Exemplo: <b>http://127.0.0.1:5000/teorema?ladoa=oito&ladob=tres</b></p>
+        <img src="../static/requisicao-invalida-parametro-string.png" alt="Imagem." id="triangulo"></img>
+    </div>
+</body>
+
+</html>
