@@ -14,7 +14,7 @@ def homePage():
     # return {"key": "value"}
 
 # Mapeamento da API
-@app.route("/teorema", methods=["GET"])
+@app.get("/teorema")
 def recebeCatetos():
     mensagem = None
 
