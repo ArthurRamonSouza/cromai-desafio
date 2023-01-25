@@ -7,6 +7,11 @@ app = Flask(__name__)
 # Por padrão o Flask ordena o json de resposta
 #app.config["JSON_SORT_KEYS"] = False
 
+# Primeira página da API
+@app.get("/")
+def home():
+    return "Para saber como a API funciona, vá para a documentação em: https://arthurramonsouza.github.io/cromai-desafio/api/templates/api-documentation.html"
+
 # Mapeamento da API
 @app.get("/teorema")
 def recebeCatetos():
