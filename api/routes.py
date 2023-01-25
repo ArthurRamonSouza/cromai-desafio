@@ -16,6 +16,7 @@ def homePage():
 # Mapeamento da API
 @app.route("/teorema", methods=["GET"])
 def recebeCatetos():
+    mensagem = None
 
     # Pegar os parametros da requisição, verificar se é nulo ou não e depois armazená-los
     if(request.args.get("ladoa") != None):
