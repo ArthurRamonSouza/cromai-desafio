@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from api import main
+import main
 
 # Criando a API com Flask 
 app = Flask("Desafio Cromai API")
@@ -70,3 +70,4 @@ def response(status, mensagem, resultado = False):
         response["Resultado"] = resultado
 
     return response
+app.run()
