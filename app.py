@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Página inicial será a documentação da API
 @app.get('/')
 def homePage():
-    return render_template("api/templates/api-documentation.html")
+    return render_template("api-documentation.html")
     # return {"key": "value"}
 
 # Mapeamento da API
