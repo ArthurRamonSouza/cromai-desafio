@@ -198,3 +198,23 @@ input {
 .hidden {
     display: none;
 }
+
+@media screen and (max-width: 820px) {
+    body, h4, input, button, .texto h5, .texto p {font-size: 15px;}
+    h1 {font-size: 25px;}
+    a, .texto h4 {font-size: 20px}
+    button{margin-top: 10%;}
+    .triangulo{margin-top:6%; margin-bottom: 12%;}
+    .texto{width: 80%;}
+}
+
+@media screen and (max-width: 412px) {
+    body, h4, input, button, .texto h5, .texto p {font-size: 10px;}
+    h1 {font-size: 20px; margin-right: 5%;}
+    a, .texto h4 {font-size: 15px}
+    button{margin-top: 10%;}
+    .triangulo{margin-top:15%; margin-bottom: 20%;}
+    .texto h4{display:flex; justify-content: center;}
+    .texto{width: 80%;}
+
+}
