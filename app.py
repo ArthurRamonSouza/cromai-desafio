@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from . import formula
+from .api import formula
 
 # Criando a API com Flask 
 app = Flask(__name__)
