@@ -1,17 +1,19 @@
 from flask import Flask, request, render_template
-import main
+from api import main
 
-# Criando o site da API e a API com Flask 
+# Criando a API com Flask 
 app = Flask("Desafio Cromai API")
 
 # Por padrão o Flask ordena o json de resposta
 #app.config["JSON_SORT_KEYS"] = False
 
+# Página inicial será a documentação da API
 @app.route("/", methods=["GET"])
 def homePage():
-    return render_template("guide.html")
+    return render_template("api-documentation.html")
     # return {"key": "value"}
 
+# Mapeamento da API
 @app.route("/teorema", methods=["GET"])
 def recebeCatetos():
 
@@ -57,6 +59,7 @@ def recebeCatetos():
 
     return response(status, mensagem)
 
+# Função para uma response personalizada e organizada
 def response(status, mensagem, resultado = False):
     response = {}
     response["Status"] = status
@@ -67,5 +70,3 @@ def response(status, mensagem, resultado = False):
         response["Resultado"] = resultado
 
     return response
-
-app.run()
