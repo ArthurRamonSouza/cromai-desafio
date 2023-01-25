@@ -47,6 +47,10 @@ a {
     margin-right: 2%;
 }
 
+.conteudo a{
+    color: black;
+}
+
 i {
     font-size: 30px;
     margin-top: 80%;
