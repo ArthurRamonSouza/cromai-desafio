@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-import main
+import formula
 
 # Criando a API com Flask 
 app = Flask(__name__)
@@ -50,7 +50,7 @@ def recebeCatetos():
     if((ladoA and ladoB) or (ladoA and ladoC) or (ladoB and ladoC)):
         status = 200
         mensagem = "Requisicao valida."
-        resultado = main.pitagoras(ladoA, ladoB, ladoC)
+        resultado = formula.pitagoras(ladoA, ladoB, ladoC)
         return response(status, mensagem, resultado)
 
     # Caso dois ou mais dos lados sejam nulos, retorna um erro
