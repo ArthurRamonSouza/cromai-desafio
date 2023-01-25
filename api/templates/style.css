@@ -81,6 +81,7 @@ i {
     header h1 {font-size: 25px; margin-right: 10%;}
     h1, i {font-size: 20px}
     p {font-size: 15px}
+    .conteudo{padding: 20px;}
     img {
         margin: 5px;
         max-width: 500px;
@@ -92,10 +93,12 @@ i {
 
 @media screen and (max-width: 412px) {
     header h1 {font-size: 20px; margin-left: 20%; margin-right: 10%;}
+    .conteudo{padding: 20px;}
     h1, i {font-size: 15px}
     p {font-size: 12px}
     img {
-        margin: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         max-width: 350px;
         width: auto;
         height: auto;

@@ -23,22 +23,22 @@ function mudarValoresTriangulo() {
     // Se o cateto A e B forem preenchidos, o input do C é desativado para que o cáculo possa ser feito.
     if ((document.querySelector("#lado-menor").innerHTML != "") && (document.querySelector("#lado-medio").innerHTML != "")) {
         let C = Math.sqrt(Math.pow(catetos[0], 2) + Math.pow(catetos[1], 2));
-        document.querySelector("#lado-maior").innerHTML = C;
-        document.querySelector("#cateto-c").value = C;     
+        document.querySelector("#lado-maior").innerHTML = C.toFixed(2);
+        document.querySelector("#cateto-c").value = C.toFixed(2);     
     }
 
     // Se o cateto A e C forem preenchidos, o input do B é desativado para que o cáculo possa ser feito.
     else if ((document.querySelector("#lado-menor").innerHTML != "") && (document.querySelector("#lado-maior").innerHTML != "")) {
         let B = Math.sqrt(Math.pow(catetos[2], 2) - Math.pow(catetos[0], 2));
-        document.querySelector("#lado-medio").innerHTML = B;
-        document.querySelector("#cateto-b").value = B;
+        document.querySelector("#lado-medio").innerHTML = B.toFixed(2);
+        document.querySelector("#cateto-b").value = B.toFixed(2);
     }
 
     // Se o cateto B e C forem preenchidos, o input do A é desativado para que o cáculo possa ser feito.
     else if ((document.querySelector("#lado-medio").innerHTML != "") && (document.querySelector("#lado-maior").innerHTML != "")) {
         let A = Math.sqrt(Math.pow(catetos[2], 2) - Math.pow(catetos[1], 2));
-        document.querySelector("#lado-menor").innerHTML = A;
-        document.querySelector("#cateto-a").value = A;
+        document.querySelector("#lado-menor").innerHTML = A.toFixed(2);
+        document.querySelector("#cateto-a").value = A.toFixed(2);
     }
 
     // Condicionais para impedir que os valores dos lados do triângulo fique nulo

@@ -89,7 +89,6 @@ button {
 }
 
 button:hover {
-    display:block;
     transition: 0.6s;
     background-position: -250px center;
     background-color: rgba(0, 0, 0, 0.2);
@@ -200,19 +199,22 @@ input {
 }
 
 @media screen and (max-width: 820px) {
-    body, h4, input, button, .texto h5, .texto p {font-size: 15px;}
+    body, h4, input, button, .texto h5, .texto p {font-size: 15px; font-weight: bolder;}
     h1 {font-size: 25px;}
+    input {width: 60px;}
     a, .texto h4 {font-size: 20px}
-    button{margin-top: 10%;}
+    button{margin-top: 10%; border-width: 2px;}
     .triangulo{margin-top:6%; margin-bottom: 12%;}
     .texto{width: 80%;}
 }
 
 @media screen and (max-width: 412px) {
-    body, h4, input, button, .texto h5, .texto p {font-size: 10px;}
+    body, h4, input, button, .texto h5, .texto p {font-size: 10px; font-weight: bolder;}
+    .filtro{background-color: rgba(255, 255, 255, 0.8);}
+    input {width: 60px;}
     h1 {font-size: 20px; margin-right: 5%;}
     a, .texto h4 {font-size: 15px}
-    button{margin-top: 10%;}
+    button{margin-top: 10%; border-width: 2px;}
     .triangulo{margin-top:15%; margin-bottom: 20%;}
     .texto h4{display:flex; justify-content: center;}
     .texto{width: 80%;}
