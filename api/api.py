@@ -12,10 +12,10 @@ app = Flask("Desafio Cromai API")
 # Por padrão o Flask ordena o json de resposta
 #app.config["JSON_SORT_KEYS"] = False
 
-# Página inicial será  o guia/documentação da API
+# Página inicial será a documentação da API
 @app.route("/", methods=["GET"])
 def homePage():
-    return render_template("guide.html")
+    return render_template("api-documentation.html")
     # return {"key": "value"}
 
 # Mapeamento da API
